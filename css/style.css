@@ -83,3 +83,11 @@
     font-weight: bold;
     font-size: 17px;
 }
+.cadastro-realizado{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5076D9;
+    -webkit-text-stroke: 1px black;
+    font-weight: bold;
+    position: relative;
+}
