@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
   }
-  @media screen and (min-width: 600px) {
+  
   .sidebar {
     height: 100%;
     width: 250px;
@@ -24,9 +24,9 @@ body {
   .sidebar a:hover {
     background-color: #555;
   }
-  }
+  
   .hamburguer {
-    display: flex;
+    display: none;
     cursor: pointer;
     background-color: #5076d9;
     
