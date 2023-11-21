@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+  }
+  @media screen and (min-width: 600px) {
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    background-color: #5076d9;
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #5076d9;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  }
+  .hamburguer {
+    display: flex;
+    cursor: pointer;
+    background-color: #5076d9;
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .hamburguer img{
+    width: 40px;
+    height: auto; /* Isso mantém a proporção da imagem */
+  }
+  
+  
+  .bar {
+    color: #5076d9;
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-mobile {
+    display: flex;
+    position: fixed;
+    
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #33333300;
+   
+    box-sizing: border-box;
+  }
+  
+  .menu-mobile a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #000000d3;
+    
+    display: block;
+    transition: 0.4s;
+  }
+  
+  .menu-mobile a:hover {
+    background-color: #ff0000;
+    cursor: pointer red;
+  }
+  
+  .conteudo {
+    margin-left: 260px;
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .hamburguer {
+      display: block;
+      color: #ffffff;
+    }
+  
+    .conteudo {
+      margin-left: 0;
+    }
+  }
