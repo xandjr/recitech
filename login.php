@@ -18,7 +18,8 @@ $sql = "SELECT * FROM cadastros WHERE email = '$email' AND senha='$senha'";
 $result = $conn -> query($sql);
 
 if ($result -> num_rows > 0) {
-    echo "Login bem-sucedido!";
+    header("Location: loginsucedido.html");
+    exit();
 } else {
     echo "Login invalido. Tente novamente.";
 }

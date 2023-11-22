@@ -21,7 +21,8 @@ $senha2 = $_POST['senha2'];
 $sql = "INSERT INTO cadastros (nome, email, endereco, telefone, senha, senha2) VALUES ('$nome', '$email', '$endereco', '$telefone', '$senha', '$senha2')";
 
 if ($conn -> query($sql) === TRUE) {
-    echo "Cadastro realizado!";
+    header("Location: cadastrorealizado.html");
+    exit();
 } else {
     echo "Erro: " . $sql . "<br>" . $conn -> error;
 }
