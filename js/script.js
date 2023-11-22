@@ -10,7 +10,15 @@ function validarSenha(){
     return true;
 }
 
+jQuery(function($){
+    $("#telefone").mask("(99) 99999-9999");
+    $('#email').mask('A', {
+        translation: {
+          'A': {pattern: /[\w@\-.+]/, recursive: true}
+        }});
+});
+
 function toggleMenu() {
     var menuMobile = document.querySelector('.menu-mobile');
     menuMobile.style.display = (menuMobile.style.display === 'block') ? 'none' : 'block';
-  }
+}
