@@ -59,7 +59,7 @@ body {
   }
   
   .menu-mobile {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     left: 0;
