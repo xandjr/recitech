@@ -5,15 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReciTech</title>
     <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style2.css">
     <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
     <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
     <script src="js/script.js" defer></script>
 </head>
-<body class="centralizado">
-    <img src="imagens/logo.svg" class="logo"><br>
-    <a class="titulo">Fulano de Tal</a><br>
-    <a class="meta">Amante da Natureza</a><br>
+<body>
     
+    <div class="sidebar">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+        <a href="#">Item 4</a>
+      </div>
+    
+      <!-- Botão hamburguer (mobile) -->
+      <div class="hamburguer" onclick="toggleMenu()">
+        <img src="imagens/hamburguer.png" alt="Ícone Hambúrguer" onclick="toggleMenu">
+        <p class="nome-pagina">INICIO</p>
+      </div>
+    
+      <!-- Menu hamburguer (mobile) -->
+      <div class="menu-mobile">
+        <a href="#">INICIO</a>
+        <a href="#">PERFIL</a>
+        
+        <div class="submenu" >
+          <a href="#" >INFORMATIVOS</a>
+          <ul>
+            <li><a href="#">Reciclagem</a></li>
+            <li><a href="#">Reaproveitamento</a></li>
+          </ul>
+        </div>
+        <a href="#" >PONTOS DE COLETA</a>
+      </div>
+    
+      <!-- Conteúdo da página -->
+      <div class="conteudo">
+        <img src="imagens/logo.svg" class="logo"><br>
+        <a class="titulo">Fulano de Tal</a><br>
+        <a class="meta">Amante da Natureza</a><br>
+      </div>
+    
+      <script src="js/script.js"></script>
 </body>
 </html>
