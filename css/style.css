@@ -6,22 +6,7 @@
     .centralizado{
         text-align: center;
     }
-    .titulo{
-        font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #5076D9;
-        -webkit-text-stroke: 1px black;
-        font-weight: bold;
-        position: relative;
-    }
-    .meta{
-        font-size: 25px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #8FCF71;
-        -webkit-text-stroke: 1px black;
-        font-weight: bold;
-        position: relative;
-    }
+    
     .background{
         background-color: #e4e4e4;
         background: linear-gradient(180deg, #5076D9, #e4e4e4);
