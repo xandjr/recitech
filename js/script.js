@@ -27,9 +27,11 @@ function toggleSubmenu() {
     var pontosColeta = document.getElementById('pontos-coleta');
     var submenuUl = document.querySelector('.submenu ul');
   
-    if (submenuUl.style.display === 'block') {
-      pontosColeta.style.marginTop = submenuUl.clientHeight + 'px';
-    } else {
+    if (submenuUl.style.display === 'block' || submenuUl.style.display === '') {
+      submenuUl.style.display = 'none';
       pontosColeta.style.marginTop = '0';
+    } else {
+      submenuUl.style.display = 'block';
+      pontosColeta.style.marginTop = submenuUl.clientHeight + 'px';
     }
   }
