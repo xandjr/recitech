@@ -22,3 +22,14 @@ function toggleMenu() {
     var menuMobile = document.querySelector('.menu-mobile');
     menuMobile.style.display = (menuMobile.style.display === 'block') ? 'none' : 'block';
 }
+
+function toggleSubmenu() {
+    var pontosColeta = document.getElementById('pontos-coleta');
+    var submenuUl = document.querySelector('.submenu ul');
+  
+    if (submenuUl.style.display === 'block') {
+      pontosColeta.style.marginTop = submenuUl.clientHeight + 'px';
+    } else {
+      pontosColeta.style.marginTop = '0';
+    }
+  }
