@@ -177,7 +177,32 @@ body {
     -webkit-text-stroke: 1px black;
     font-weight: bold;
     position: relative;
-}
+    }
+
+  .conteudo1{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .container{
+  
+ 
+  display: inline-block;
+  }
+  .img{
+    width: 230px;
+    height: 150px;
+    float: left;
+    /* shape-outside: url('imagens/recycle_sign.jpg'); */
+    margin: 15px;
+    
+  }
+  .texto{
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    
+  }
   
   @media screen and (max-width: 600px) {
     nav {
@@ -189,7 +214,25 @@ body {
       color: #ffffff;
     }
   
-    .conteudo {
-      margin-left: 0;
+    
+    .container{
+      display: inline-block;
+      margin-left: 5%;
+      margin-right: 5%;
+      
+      
+    }
+    .img{
+      width: 100px;
+      height: 60px;
+      align-items: center;
+      float: left;
+      
+    }
+    .texto{
+      padding-left: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: smaller;
+    
     }
   }
