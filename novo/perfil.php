@@ -1,52 +1,51 @@
 <?php
+
 session_start();
 
 // Verificar se o ID do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
-    // Conecta ao banco de dados
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "recitech";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Verifica a conexão
-    if ($conn->connect_error) {
-        die("Conexão falhou: " . $conn->connect_error);
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+ // Verificar se a conexão foi estabelecida com sucesso
+    if (!$conn) {
+      die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
     }
 
-    // Prepara e executa a consulta para recuperar os dados do usuário com base no ID
-    $id_usuario = $_SESSION['id'];
-    $sql = "SELECT nome, endereco, telefone, foto FROM cadastros WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $id_usuario);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $usuario = $_SESSION['id'];
 
-    // Verifica se a consulta retornou algum resultado
+    $sql = "SELECT nome, endereco, telefone, foto FROM cadastros WHERE id = $usuario";
+    $result = $conn->query($sql);
+
+    if ($result === false) {
+        die("Erro na consulta: " . $conn->error);
+    }
+
     if ($result->num_rows > 0) {
-        // Recupera os dados do perfil do usuário
+        // Recuperar os dados do perfil do usuário e definir as variáveis
         $row = $result->fetch_assoc();
         $nome = $row["nome"];
         $endereco = $row["endereco"];
         $telefone = $row["telefone"];
         $foto = $row["foto"];
+
     } else {
-        // Se não houver resultados, define as variáveis como vazias ou null
+        // Se não houver resultados, defina as variáveis como vazias ou null
         $nome = "";
         $endereco = "";
         $telefone = "";
         $foto = "";
 
-        echo "Nenhum resultado encontrado para o ID de usuário: $id_usuario";
+        echo "Nenhum resultado encontrado para o ID de usuário: $usuario";
     }
 
-    // Fecha a conexão com o banco de dados
-    $stmt->close();
     $conn->close();
 } else {
     echo "ID do usuário não encontrado na sessão";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +56,7 @@ if (isset($_SESSION['id'])) {
     <title>ReciTech</title>
     <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
     <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
     <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
     <script src="js/script.js" defer></script>
@@ -99,10 +99,12 @@ if (isset($_SESSION['id'])) {
     
       <!-- Conteúdo da página -->
       <div class="conteudo">
-        <img src="<?php echo $foto; ?>" alt="Foto do usuário" class="logo"><br>
-        <p><?php echo $nome; ?></p><br>
-        <p><?php echo $endereco; ?></p><br>
-        <p><?php echo $telefone; ?></p><br>
+        <img src="<?php echo $foto; ?>"><br>
+        <div>
+          <?php echo "<p class='nome'>$nome</p>"; ?>
+          <p><?php echo $endereco ?></p><br>
+          <p><?php echo $telefone ?></p><br>
+        </div>
       </div>
 
 </body>
