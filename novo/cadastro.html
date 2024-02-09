@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciTech</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
+    <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body class="background">
+    <form action="cadastro.php" method="post">
+        <div class="centralizado">
+        <img src="imagens/logo.svg" class="logo"><br><br>
+        <p class="titulo">CADASTRO</p><br><br>
+        <input type="text" id="nome" name="nome" placeholder="Nome" class="caixa-cadastro"><br>
+        <input type="text" id="email" name="email" placeholder="E-mail" class="caixa-cadastro" required><br>
+        <input type="text" id="endereco" name="endereco" placeholder="Endereço" class="caixa-cadastro" required><br>
+        <input type="text" id="telefone" name="telefone" placeholder="Telefone" class="caixa-cadastro"><br>
+        <input type="file" id="foto" name="foto" placeholder="Foto" class="caixa-cadastro2"><br>
+        <input type="password" id="senha" name="senha" placeholder="Senha" class="caixa-cadastro" required><br>
+        <input type="password" id="senha2" name="senha2" placeholder="Confirme a senha" class="caixa-cadastro" required><br><br>
+        <input type="submit" class="botao" value="Cadastrar">
+        </div>
+    </form>
+</body>
+</html>
