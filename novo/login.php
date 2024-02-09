@@ -1,33 +1,33 @@
 <?php
+session_start();
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "recitech";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if ($conn -> connect_error) {
-    die("Conexão falhou: " . $conn -> connect_error);
+if (!$conn) {
+    die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+$email = $_POST["email"];
+$senha = $_POST["senha"];
 
-$sql = "SELECT * FROM cadastros WHERE email = '$email' AND senha='$senha'";
-$result = $conn -> query($sql);
+$query = "SELECT * FROM cadastros WHERE email = '{$email}' AND senha = '{$senha}'";
+$result = mysqli_query($conn, $query);
 
-if ($result->num_rows > 0) {
-    
-    $row = $result->fetch_assoc();
-    $id_usuario = $row['id'];
-    $_SESSION['id'] = $id_usuario;
+if (mysqli_num_rows($result) > 0) {
+    $usuario = mysqli_fetch_assoc($result);
 
-    header("Location: inicio.html");
+    $_SESSION['id'] = $usuario['id']; 
+
+    header('Location: inicio.html');
     exit();
 } else {
-    echo "Login invalido. Tente novamente.";
+    echo "Usuário ou senha inválidos.";
 }
 
-$conn -> close();
+mysqli_close($conn);
 ?>
