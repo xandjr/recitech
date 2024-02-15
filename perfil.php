@@ -71,7 +71,7 @@ if (isset($_SESSION['id'])) {
 <body>
     <!-- Navbar -->
     <nav>
-    <a href="inicio.php">Início</a>
+      <a href="inicio.php">Início</a>
       <a href="perfil.php">Perfil</a>
       <div class="dropdown">
         <a href="#">Informativos</a>
@@ -104,7 +104,7 @@ if (isset($_SESSION['id'])) {
       </div>
     
       <!-- Conteúdo da página -->
-      <div class="conteudo">
+      <div class="conteudo" >
         <img class="fotoperfil" src="<?php echo $foto; ?>" alt="Meu Perfil"><br>
         <div>
           <?php echo "<p class='textoperfil'>$nome</p>"; ?>
