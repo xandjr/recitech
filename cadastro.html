@@ -12,7 +12,7 @@
     <script src="js/script.js" defer></script>
 </head>
 <body class="background">
-    <form action="cadastro.php" method="post">
+    <form action="cadastro.php" method="post" onsubmit="return validarSenha()">
         <div class="centralizado">
         <img src="imagens/logo.svg" class="logo"><br><br>
         <p class="titulo">CADASTRO</p><br><br>
@@ -21,8 +21,9 @@
         <input type="text" id="endereco" name="endereco" placeholder="Endereço" class="caixa-cadastro" required><br>
         <input type="text" id="telefone" name="telefone" placeholder="Telefone" class="caixa-cadastro"><br>
         <input type="password" id="senha" name="senha" placeholder="Senha" class="caixa-cadastro" required><br>
-        <input type="password" id="senha2" name="senha2" placeholder="Confirme a senha" class="caixa-cadastro" required><br><br>
+        <input type="password" id="senha2" name="senha2" placeholder="Repita sua senha" class="caixa-cadastro" onblur="validarSenha()" required><br><br>
         <input type="submit" class="botao" value="Cadastrar">
+        <a href="index.html" class="botao-cadastrar" style="transform: translatex(-100%);">Já tenho conta</a>
         </div>
     </form>
 </body>

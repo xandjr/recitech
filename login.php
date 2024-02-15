@@ -1,28 +1,42 @@
 <?php
+session_start();
 
 $servername = "localhost";
-$username = "id21818704_recitech";
-$password = "R3cit3ch.";
-$dbname = "id21818704_recibd";
+$username = "root";
+$password = "";
+$dbname = "recitech";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if ($conn -> connect_error) {
-    die("Conexão falhou: " . $conn -> connect_error);
+if (!$conn) {
+    die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+// Recebe o email e senha
+$email = $_POST["email"];
+$senha = $_POST["senha"];
 
-$sql = "SELECT * FROM cadastros WHERE email = '$email' AND senha='$senha'";
-$result = $conn -> query($sql);
+// Verifica se o email e a senha estão corretos com o banco de dados
+$query = "SELECT * FROM cadastros WHERE email = '{$email}'";
+$result = mysqli_query($conn, $query);
 
-if ($result -> num_rows > 0) {
-    header("Location: inicio.html");
-    exit();
+// Verifica os dados
+if (mysqli_num_rows($result) > 0) {
+    $usuario = mysqli_fetch_assoc($result);
+    // Busca a senha do usuário que está no banco de dados
+    $senha2 = $usuario['senha'];
+
+    // Verifica se as senhas estão batendo
+    if (password_verify($senha, $senha2)){
+        $_SESSION['id'] = $usuario['id']; 
+        header('Location: inicio.php');
+        exit();
+    } else {
+        header('Location: logininvalido.html');
+    }
 } else {
-    echo "Login invalido. Tente novamente.";
+    header('Location: logininvalido.html');
 }
 
-$conn -> close();
+mysqli_close($conn);
 ?>

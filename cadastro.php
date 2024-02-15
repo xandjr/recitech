@@ -1,14 +1,14 @@
 <?php
 
 $servername = "localhost";
-$username = "id21818704_recitech";
-$password = "R3cit3ch.";
-$dbname = "id21818704_recibd";
+$username = "root";
+$password = "";
+$dbname = "recitech";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if ($conn -> connect_error) {
-    die("Conexão falhou: " . $conn -> connect_error);
+if (!$conn) {
+    die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
 $nome = $_POST['nome'];
@@ -16,9 +16,10 @@ $email = $_POST['email'];
 $endereco = $_POST['endereco'];
 $telefone = $_POST['telefone'];
 $senha = $_POST['senha'];
-$senha2 = $_POST['senha2'];
+$senhacriptografada = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO cadastros (nome, email, endereco, telefone, senha, senha2) VALUES ('$nome', '$email', '$endereco', '$telefone', '$senha', '$senha2')";
+
+$sql = "INSERT INTO cadastros (nome, email, endereco, telefone, senha) VALUES ('$nome', '$email', '$endereco', '$telefone', '$senhacriptografada')";
 
 if ($conn -> query($sql) === TRUE) {
     header("Location: cadastrorealizado.html");
@@ -27,5 +28,5 @@ if ($conn -> query($sql) === TRUE) {
     echo "Erro: " . $sql . "<br>" . $conn -> error;
 }
 
-$conn -> close();
+mysqli_close($conn);
 ?>
