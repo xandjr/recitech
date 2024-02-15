@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18/11/2023 às 22:39
+-- Tempo de geração: 15-Fev-2024 às 18:34
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cadastros`
+-- Estrutura da tabela `cadastros`
 --
 
 CREATE TABLE `cadastros` (
@@ -33,36 +33,29 @@ CREATE TABLE `cadastros` (
   `email` varchar(255) NOT NULL,
   `endereco` varchar(255) NOT NULL,
   `telefone` varchar(20) NOT NULL,
-  `senha` varchar(255) NOT NULL,
-  `senha2` varchar(255) NOT NULL
+  `foto` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `cadastros`
---
-
-INSERT INTO `cadastros` (`id`, `nome`, `email`, `endereco`, `telefone`, `senha`, `senha2`) VALUES
-(1, 'Alexandre', 'abc@gmail.com', 'Rua Deus Nos Acuda, 25', '84999887766', '1234', '1234');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `cadastros`
+-- Índices para tabela `cadastros`
 --
 ALTER TABLE `cadastros`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `cadastros`
 --
 ALTER TABLE `cadastros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
