@@ -5,6 +5,59 @@ body {
   }
   /* Menu desktop */
   @media screen and (min-width: 601px) {
+    .textoperfil{
+      color: #5076d9;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .fotoperfil{
+      border-radius: 100px;
+      width: 200px;
+    }
+    .caixa-edicao{
+      font-size: 25px;
+      width: 50%;
+      height: 100%;
+      border-radius: 6px;
+      border: solid 0.5px;
+      padding-left: 3px;
+      margin-bottom: 5px;
+  }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+  }
+
+    .modal-conteudo {
+        background-color: #e7e7e7;
+        margin: 7% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.322);
+        border-radius: 50px;
+    }
+
+    .fechar {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .fechar:hover, .fechar:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
     nav {
       background-color: #5076d9;
       overflow: hidden;
@@ -53,12 +106,12 @@ body {
       background-color: #ddd;
       color: black;
     }
+    
   }
   .hamburguer {
     display: none;
     cursor: pointer;
     background-color: #5076d9;
-    
     position: relative;
     top: 0px;
     left: 0px;
@@ -66,27 +119,18 @@ body {
   }
   .hamburguer img{
     width: 40px;
-    height: auto; /* Isso mantém a proporção da imagem */
+    height: auto;
     
   }
   .nome-pagina{
     position: relative;
-    top: -53px;
+    top: -35px;
     text-align: center;
     font-size: larger;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 90px;
   }
-  
-  /* .bar {
-    color: #5076d9;
-    width: 35px;
-    height: 5px;
-    background-color: #000000;
-    
-    margin: 6px 0;
-    transition: 0.4s;
-  } */
   
   .menu-mobile {
     display: none;
@@ -106,14 +150,13 @@ body {
     font-size: 18px;
     color: #ffffff;
     background-color: #000000d3;
-    
     display: block;
     transition: 0.4s;
   }
   
   .menu-mobile a:hover {
-    background-color: #ff0000;
-    cursor: pointer red;
+    background-color: #5076d9;
+    cursor: pointer #5076d9;
   }
   .submenu {
     position: relative;
@@ -166,7 +209,6 @@ body {
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     color: #5076D9;
-    /*-webkit-text-stroke: 1px black;*/
     font-weight: bold;
     position: relative;
   }
@@ -174,26 +216,12 @@ body {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     color: #8FCF71;
-    -webkit-text-stroke: 1px black;
     font-weight: bold;
     position: relative;
-    }
-
-  .conteudo1{
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .container{
-  
- 
-  display: inline-block;
   }
   .img{
-    width: 230px;
-    height: 150px;
+    width: 200px;
     float: left;
-    /* shape-outside: url('imagens/recycle_sign.jpg'); */
     margin: 15px;
     
   }
@@ -201,8 +229,11 @@ body {
     padding-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    
+    padding: 10px 0px;
   }
+  .container{
+    display: inline-block;
+    }
   
   @media screen and (max-width: 600px) {
     nav {
@@ -214,17 +245,71 @@ body {
       color: #ffffff;
     }
   
-    
+    .conteudo {
+      margin-left: 0;
+    }
+    .textoperfil{
+      color: #5076d9;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .fotoperfil{
+      border-radius: 100px;
+      width: 200px;
+    }
+    .caixa-edicao{
+      font-size: 25px;
+      width: 50%;
+      height: 100%;
+      border-radius: 6px;
+      border: solid 0.5px;
+      padding-left: 3px;
+      margin-bottom: 5px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+  
+    .modal-conteudo {
+        background-color: #e7e7e7;
+        margin: 7% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.322);
+        border-radius: 50px;
+    }
+  
+    .fechar {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+  
+    .fechar:hover, .fechar:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     .container{
+      padding: 10px 0px;
       display: inline-block;
       margin-left: 5%;
       margin-right: 5%;
-      
-      
     }
     .img{
       width: 100px;
-      height: 60px;
       align-items: center;
       float: left;
       
