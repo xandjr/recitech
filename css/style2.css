@@ -23,7 +23,15 @@ body {
       border: solid 0.5px;
       padding-left: 3px;
       margin-bottom: 5px;
-  }
+    }
+    .cadastro-realizado{
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5076D9;
+      -webkit-text-stroke: 0.5px black;
+      font-weight: bold;
+      position: relative;
+    }
     .modal {
       display: none;
       position: fixed;
@@ -34,7 +42,7 @@ body {
       height: 100%;
       overflow: auto;
       background-color: rgba(0,0,0,0.4);
-  }
+    }
 
     .modal-conteudo {
         background-color: #e7e7e7;
@@ -319,5 +327,13 @@ body {
       font-family: Arial, Helvetica, sans-serif;
       font-size: smaller;
     
+    }
+    .cadastro-realizado{
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5076D9;
+      -webkit-text-stroke: 0.5px black;
+      font-weight: bold;
+      position: relative;
     }
   }
