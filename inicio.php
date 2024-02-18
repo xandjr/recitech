@@ -82,7 +82,7 @@ if (isset($_SESSION['id'])) {
       <!-- Botão hamburguer (mobile) -->
       <div class="hamburguer" onclick="toggleMenu()">
         <img src="imagens/hamburguer.png" alt="Ícone Hambúrguer">
-        <p class="nome-pagina" style="top: -53px">INICIO</p>
+        <p class="nome-pagina">INICIO</p>
       </div>
     
       <!-- Menu hamburguer (mobile) -->

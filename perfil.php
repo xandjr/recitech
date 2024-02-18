@@ -43,7 +43,6 @@ if (isset($_SESSION['id'])) {
         $endereco = "";
         $telefone = "";
         $foto = "";
-
         echo "Nenhum resultado encontrado para o ID de usuário: $usuario";
     }
 
