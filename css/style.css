@@ -15,15 +15,7 @@
         justify-content: center;
         height: 100vh;
     }
-    .caixa-cadastro{
-        font-size: 25px;
-        width: 100%;
-        height: 100%;
-        border-radius: 6px;
-        border: solid 0.5px;
-        padding-left: 3px;
-        margin-bottom: 5px;
-    }
+
     .logo{
         width: 150px;
     }
@@ -38,8 +30,8 @@
         width: 120px;
         height: 50px;
         cursor: pointer;
-        border: solid 1px black;
-        box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.322);
+        border: none;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.348);
     }
     .botao:hover{
         transform: scale(1.1);
@@ -48,27 +40,12 @@
         font-family: Arial, Helvetica, sans-serif;
         color: #353535;
         font-weight: bold;
-        font-size: 17px;
-        text-decoration: underline;
+        font-size: 12px;
+        text-decoration: none;
         cursor: pointer;
     }
     .fonte-pequena:hover{
         color: #5076D9;
-    }
-    .botao-cadastrar{
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #353535;
-        font-weight: bold;
-        font-size: 17px;
-        text-decoration: underline;
-        cursor: pointer;
-        position: fixed;
-        bottom: 0;
-        transform: translatex(-50%);
-    }
-    .botao-cadastrar:hover{
-        color: #5076D9
     }
     .fonte-esquecisenha{
         font-family: Arial, Helvetica, sans-serif;
