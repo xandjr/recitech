@@ -40,7 +40,7 @@
         }
             
     ],
-    "start_url": "/recitech/",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#5076D9"

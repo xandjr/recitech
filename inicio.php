@@ -46,7 +46,6 @@ if (isset($_SESSION['id'])) {
 
     mysqli_close($conn);
 } else {
-    echo "ID do usuário não encontrado na sessão";
     header("Location: index.html");
 }
 
