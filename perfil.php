@@ -116,7 +116,7 @@ if (isset($_SESSION['id'])) {
           <div id="modal" class="modal">
             <div class="modal-conteudo">
               <span class="fechar" onclick="fecharModal()">&times;</span>
-              <h2 class="titulo">Editar Perfil</h2>
+              <p class="titulo" style="font-size: 35px; margin-bottom: 5px">Editar Perfil</p>
               <form action="atualizarperfil.php" method="post" enctype="multipart/form-data">
                 <label for="nome" style="color:black; font-size: 25px">Nome</label><br>
                 <input type="text" id="nome" name="nome" value="<?php echo $nome; ?>" class="caixa-edicao"><br><br>
@@ -125,7 +125,7 @@ if (isset($_SESSION['id'])) {
                 <label for="telefone" style="color:black; font-size: 25px">Telefone</label><br>
                 <input type="text" id="telefone" name="telefone" value="<?php echo $telefone; ?>" class="caixa-edicao"><br><br>
                 <label for="foto" style="color:black; font-size: 25px">Foto</label><br>
-                <input type="file" id="foto" name="foto" class="caixa-edicao" accept="image/*"><br><br>
+                <input type="file" id="foto" name="foto" class="caixa-edicao" style="box-shadow:none" accept="image/*"><br><br>
                 <input type="submit" value="Salvar" class="botao"><br><br>
                 </form>
             </div>
