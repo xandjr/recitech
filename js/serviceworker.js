@@ -8,7 +8,7 @@ const RUNTIME = 'runtime';
 // Uma lista de recursos locais que sempre queremos armazenar em cache.
 const PRECACHE_URLS = [
     
-      'index.html'
+      'index.php'
       
 ];
 
