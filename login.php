@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
     // Verifica se as senhas estão batendo
     if (password_verify($senha, $senha2)){
         $_SESSION['id'] = $usuario['id']; 
-        header('Location: inicio.php');
+        header('Location: index.php');
         exit();
     } else {
         header('Location: logininvalido.html');
