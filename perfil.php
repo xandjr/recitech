@@ -75,7 +75,7 @@ if (isset($_SESSION['id'])) {
         <a href="#">Informativos</a>
         <div class="dropdown-content">
           <a href="reciclagem.html">Reciclagem</a>
-          <a href="reaproveitamento.html">Reaproveitamento</a>
+          <a href="#">Reaproveitamento</a>
         </div>
       </div>
       <a href="#pontos-de-coleta">Pontos de Coleta</a>
@@ -95,7 +95,7 @@ if (isset($_SESSION['id'])) {
           <a href="#">INFORMATIVOS</a>
           <ul>
             <li><a href="reciclagem.html">RECICLAGEM</a></li>
-            <li><a href="reaproveitamento.html">REAPROVEITAMENTO</a></li>
+            <li><a href="#">REAPROVEITAMENTO</a></li>
           </ul>
         </div>
         <a href="#">PONTOS DE COLETA</a>
@@ -115,7 +115,6 @@ if (isset($_SESSION['id'])) {
           <!-- Modal -->
           <div id="modal" class="modal">
             <div class="modal-conteudo">
-              <span class="fechar" onclick="fecharModal()">&times;</span>
               <p class="titulo" style="font-size: 35px; margin-bottom: 5px">Editar Perfil</p>
               <form action="atualizarperfil.php" method="post" enctype="multipart/form-data">
                 <label for="nome" style="color:black; font-size: 25px">Nome</label><br>

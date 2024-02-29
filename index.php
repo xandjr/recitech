@@ -79,7 +79,7 @@ if (isset($_SESSION['id'])) {
         <a href="#">Informativos</a>
         <div class="dropdown-content">
           <a href="reciclagem.html">Reciclagem</a>
-          <a href="reaproveitamento.html">Reaproveitamento</a>
+          <a href="#">Reaproveitamento</a>
         </div>
       </div>
       <a href="#pontos-de-coleta">Pontos de Coleta</a>
@@ -100,7 +100,7 @@ if (isset($_SESSION['id'])) {
           <a href="#">INFORMATIVOS</a>
           <ul>
             <li><a href="reciclagem.html">Reciclagem</a></li>
-            <li><a href="reaproveitamento.html">Reaproveitamento</a></li>
+            <li><a href="#">Reaproveitamento</a></li>
           </ul>
         </div>
         <a href="#">PONTOS DE COLETA</a>
