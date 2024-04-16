@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciTech</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style2.css">
+    <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
+    <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#perfil">Perfil</a>
+      <div class="dropdown">
+        <a href="#informativos">Informativos</a>
+        <div class="dropdown-content">
+          <a href="#reciclagem">Reciclagem</a>
+          <a href="#reaproveitamento">Reaproveitamento</a>
+        </div>
+      </div>
+      <a href="#pontos-de-coleta">Pontos de Coleta</a>
+    </nav>
+    
+      <!-- Botão hamburguer (mobile) -->
+      <div class="hamburguer" onclick="toggleMenu()">
+        <img src="imagens/hamburguer.png" alt="Ícone Hambúrguer" >
+        <p class="nome-pagina">INICIO</p>
+      </div>
+    
+      <!-- Menu hamburguer (mobile) -->
+      <div class="menu-mobile">
+        <a href="#">INICIO</a>
+        <a href="#">PERFIL</a>
+        
+        <div class="submenu" onclick="toggleSubmenu()">
+          <a href="#" >INFORMATIVOS</a>
+          <ul>
+            <li><a href="#">- Reciclagem</a></li>
+            <li><a href="#">- Reaproveitamento</a></li>
+          </ul>
+        </div>
+        <a href="#" >PONTOS DE COLETA</a>
+      </div>
+    
+      <!-- Conteúdo da página -->
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63511.80332147525!2d-35.251929377304336!3d-5.786565768193954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sreciclagem%20eletronicos!5e0!3m2!1spt-BR!2sbr!4v1713292309129!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    
+      <script src="js/script.js"></script>
+</body>
+</html>
