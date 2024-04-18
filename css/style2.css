@@ -124,6 +124,7 @@ body {
       background-color: #ddd;
       color: black;
     }
+
     .fonte-pequena{
       font-family: Arial, Helvetica, sans-serif;
       color: #353535;
@@ -132,10 +133,15 @@ body {
       text-decoration: none;
       cursor: pointer;
     }
+
     .fonte-pequena:hover{
         color: #5076D9;
     }
-    
+
+    .mapa{
+      width: 100px;
+      height: 100px;
+    }
   }
   .hamburguer {
     display: none;
