@@ -109,7 +109,7 @@ if (isset($_SESSION['id'])) {
     
       <!-- Conteúdo da página -->
       <div>
-        <div id="map" class="mapa"></div>
+        <div id="map" style="height: 400px; widght: 100%;"></div>
       </div>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCMUTkMxcHAkTyEs642O1akDJZiA6H5ro&callback=initMap"></script>
       <script src="js/script.js"></script>
