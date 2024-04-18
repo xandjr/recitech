@@ -62,6 +62,7 @@ if (isset($_SESSION['id'])) {
     <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
     <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
     <script src="js/script.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCMUTkMxcHAkTyEs642O1akDJZiA6H5ro&libraries=places"></script>
     <!-- PWA -->
     <link rel="manifest" href="manifest.webmanifest.json">
     <meta content='yes' name='apple-mobile-web-app-capable' />
@@ -107,12 +108,10 @@ if (isset($_SESSION['id'])) {
       </div>
     
       <!-- Conteúdo da página -->
-      <div class="conteudo">
-        <img src="imagens/logo.png" class="logo">
-        <?php echo "<p class='titulo' style='margin: 0px'>$nome</p>"; ?>
-        <a class="meta">Amante da Natureza</a><br>
+      <div>
+        <div id="map" class="mapa"></div>
       </div>
-    
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCMUTkMxcHAkTyEs642O1akDJZiA6H5ro&callback=initMap"></script>
       <script src="js/script.js"></script>
 </body>
 </html>

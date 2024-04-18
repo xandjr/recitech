@@ -78,7 +78,7 @@ if (isset($_SESSION['id'])) {
           <a href="#">Reaproveitamento</a>
         </div>
       </div>
-      <a href="#pontos-de-coleta">Pontos de Coleta</a>
+      <a href="pontosdecoleta.php">Pontos de Coleta</a>
     </nav>
     
       <!-- Botão hamburguer (mobile) -->
@@ -98,7 +98,7 @@ if (isset($_SESSION['id'])) {
             <li><a href="#">REAPROVEITAMENTO</a></li>
           </ul>
         </div>
-        <a href="#">PONTOS DE COLETA</a>
+        <a href="pontosdecoleta.php">PONTOS DE COLETA</a>
       </div>
     
       <!-- Conteúdo da página -->
