@@ -5,9 +5,9 @@ session_start();
 // Verifica se o id do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "recitech";
+    $username = "id21872566_recitech";
+    $password = "R3cit3ch.";
+    $dbname = "id21872566_recitech";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // Verifica se a conexão foi estabelecida com sucesso
@@ -62,7 +62,7 @@ if (isset($_SESSION['id'])) {
     <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
     <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
     <script src="js/script.js" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCMUTkMxcHAkTyEs642O1akDJZiA6H5ro&libraries=places"></script>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
     <!-- PWA -->
     <link rel="manifest" href="manifest.webmanifest.json">
     <meta content='yes' name='apple-mobile-web-app-capable' />
@@ -70,6 +70,9 @@ if (isset($_SESSION['id'])) {
     <meta name="apple-mobile-web-app-status-bar" content="#5076D9">
     <meta name="theme-color" content="black">
     <link rel="apple-touch-icon" href="imagens/logo.png">
+    <style>
+      
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -88,8 +91,8 @@ if (isset($_SESSION['id'])) {
     
       <!-- Botão hamburguer (mobile) -->
       <div class="hamburguer" onclick="toggleMenu()">
-        <img src="imagens/hamburguer.png" alt="Ícone Hambúrguer">
-        <p class="nome-pagina">INICIO</p>
+        <img src="imagens/hamburguer1.png" alt="Ícone Hambúrguer">
+        <p class="nome-pagina">PONTOS DE COLETA</p>
       </div>
     
       <!-- Menu hamburguer (mobile) -->
@@ -109,9 +112,9 @@ if (isset($_SESSION['id'])) {
     
       <!-- Conteúdo da página -->
       <div>
-        <div id="map" style="height: 400px; widght: 100%;"></div>
+        <div id="map" class="mapa"></div>
       </div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCMUTkMxcHAkTyEs642O1akDJZiA6H5ro&callback=initMap"></script>
-      <script src="js/script.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCMUTkMxcHAkTyEs642O1akDJZiA6H5ro&callback=initMap" async defer></script>
+      <script src="js/map.js"></script>
 </body>
 </html>
