@@ -65,10 +65,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -23.55052, lng: -46.633308}, // Coordenadas iniciais
-    zoom: 12 // Nível de zoom inicial
-  });
-}
