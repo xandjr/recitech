@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
-  }
+}
   /* Menu desktop */
   @media screen and (min-width: 601px) {
     .textoperfil{
@@ -55,26 +55,26 @@ body {
     }
 
     .modal-conteudo {
-        background-color: #e7e7e7;
-        margin: 7% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 50%;
-        box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.322);
-        border-radius: 50px;
+      background-color: #e7e7e7;
+      margin: 7% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.322);
+      border-radius: 50px;
     }
 
     .fechar {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
     }
 
     .fechar:hover, .fechar:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
     }
     nav {
       background-color: #5076d9;
@@ -142,7 +142,7 @@ body {
 
     .mapa{
       width: 100%;
-      height: 94vh;
+      height: 95vh;
     }
     .custom-map-control-button{
       font-size: 18px;
