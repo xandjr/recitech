@@ -5,9 +5,9 @@ session_start();
 // Verifica se o id do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
     $servername = "localhost";
-    $username = "id21872566_recitech";
-    $password = "R3cit3ch.";
-    $dbname = "id21872566_recitech";
+    $username = "root";
+    $password = "";
+    $dbname = "recitech";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // Verifica se a conexão foi estabelecida com sucesso
