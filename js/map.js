@@ -17,7 +17,7 @@
 //     return div;
 //   }
 // }
-let map, infoWindow;
+var map, infoWindow;
 function initMap() {
   var mapOptions = {
       center: {lat: -5.777221144298522, lng: -35.25227316285317},
@@ -54,6 +54,15 @@ function initMap() {
           "stylers": [
             {
               "color": "#d59563"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "poi",
+          "stylers": [
+            {
+              "visibility": "off"
             }
           ]
         },
@@ -189,6 +198,19 @@ function initMap() {
       mapTypeControl: false,
   };
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
+// Adicionar marcadores
+  var marker = new google.maps.Marker({
+    position: {lat: -5.777221144298522, lng: -35.25227316285317},
+    map: map,
+    title: 'Ponto de Coleta',
+    label: 'P',
+    // icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+    animation: google.maps.Animation.DROP
+  });
+
+// Remover marcadores
+  // marker.setMap(null);
+  
 //   map.mapTypes.set('meumapa', new MeuMapa(new google.maps.Size(256,256)));
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement('button');
