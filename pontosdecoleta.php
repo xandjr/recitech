@@ -74,7 +74,7 @@ if (isset($_SESSION['id'])) {
       
     </style>
 </head>
-<body>
+<body style="background-color: #5076d9">
     <!-- Navbar -->
     <nav>
       <a href="index.php">Início</a>
@@ -91,7 +91,7 @@ if (isset($_SESSION['id'])) {
     
       <!-- Botão hamburguer (mobile) -->
       <div class="hamburguer" onclick="toggleMenu()">
-        <img src="imagens/hamburguer1.png" alt="Ícone Hambúrguer">
+        <img src="imagens/hamburguer.png" alt="Ícone Hambúrguer">
         <p class="nome-pagina">PONTOS DE COLETA</p>
       </div>
     
