@@ -6,7 +6,7 @@ body {
   /* Menu desktop */
   @media screen and (min-width: 601px) {
     .textoperfil{
-      color: #5076d9;
+      color: #4a701c;
       font-size: 30px;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
@@ -37,7 +37,7 @@ body {
     .cadastro-realizado{
       font-size: 40px;
       font-family: Arial, Helvetica, sans-serif;
-      color: #5076D9;
+      color: #4a701c;
       -webkit-text-stroke: 0.5px black;
       font-weight: bold;
       position: relative;
@@ -77,7 +77,7 @@ body {
       cursor: pointer;
     }
     nav {
-      background-color: #5076d9;
+      background-color: #434d36;
       overflow: hidden;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: bold;
@@ -105,7 +105,7 @@ body {
     nav .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #5076d9;
+      background-color: #434d36;
       z-index: 1;
     }
 
@@ -123,13 +123,13 @@ body {
     }
 
     nav .dropdown-content a:hover {
-      background-color: #ddd;
+      background-color: #c4c6b6;
       color: black;
     }
 
     .fonte-pequena{
       font-family: Arial, Helvetica, sans-serif;
-      color: #353535;
+      color: #636363;
       font-weight: bold;
       font-size: 17px;
       text-decoration: none;
@@ -137,7 +137,7 @@ body {
     }
 
     .fonte-pequena:hover{
-        color: #5076D9;
+        color: #303825;
     }
 
     .mapa{
@@ -148,7 +148,7 @@ body {
       font-size: 18px;
       color: white;
       font-weight: bold;
-      background-color: #5076D9;
+      background-color: #434d36;
       border-radius: 20px;
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -160,7 +160,8 @@ body {
       margin-top: 10px;
     }
     .custom-map-control-button:hover{
-      background: rgb(235, 235, 235);
+      color: #000;
+      background: #c4c6b6;
     }
     .nome-pagina{
       position: relative;
@@ -176,7 +177,7 @@ body {
     color: #ffffff;
     display: none;
     cursor: pointer;
-    background-color: #5076d9;
+    background-color: #434d36;
     position: relative;
     top: 0px;
     left: 0px;
@@ -211,8 +212,9 @@ body {
   }
   
   .menu-mobile a:hover {
-    background-color: #5076d9;
-    cursor: pointer #5076d9;
+    color: #000;
+    background-color: #c4c6b6;
+    cursor: pointer #c4c6b6;
   }
   .submenu {
     position: relative;
@@ -249,7 +251,7 @@ body {
   }
   
   .submenu ul li a:hover {
-    background-color: #555;
+    background-color: #c4c6b6;
   }
 
 /* CONTEUDO DA PAGINA */
@@ -264,18 +266,18 @@ body {
   .titulo{
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #5076D9;
+    color: #4a701c;
     font-weight: bold;
     position: relative;
-    -webkit-text-stroke: 0.8px #32467b;
+    -webkit-text-stroke: 0.8px #293915;
   }
   .meta{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #8FCF71;
+    color: #88b257;
     font-weight: bold;
     position: relative;
-    -webkit-text-stroke: 0.8px #477233;
+    -webkit-text-stroke: 0.8px #556d39;
   }
   .img{
     width: 200px;
@@ -307,7 +309,7 @@ body {
       margin-left: 0;
     }
     .textoperfil{
-      color: #5076d9;
+      color: #4a701c;
       font-size: 30px;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
@@ -381,14 +383,14 @@ body {
     .cadastro-realizado{
       font-size: 30px;
       font-family: Arial, Helvetica, sans-serif;
-      color: #5076D9;
+      color: #4a701c;
       -webkit-text-stroke: 0.5px black;
       font-weight: bold;
       position: relative;
     }
     .caixa-cadastro{
       font-size: 20px;
-      width: 100%;
+      width: 80%;
       height: 100%;
       border-radius: 6px;
       border: none;
@@ -405,7 +407,7 @@ body {
       cursor: pointer;
     }
     .fonte-pequena:hover{
-        color: #5076D9;
+        color: #303825;
     }
     .mapa{
       height: 95vh;
@@ -414,7 +416,7 @@ body {
       font-size: 15px;
       color: white;
       font-weight: bold;
-      background-color: #5077d9b5;
+      background-color: #434d3698;
       border-radius: 20px;
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -426,7 +428,7 @@ body {
       margin-top: 10px;
     }
     .custom-map-control-button:hover{
-      background: #233561c7;
+      background: #434d3698;
     }
     .nome-pagina{
       position: relative;

@@ -8,7 +8,7 @@
     
     .background{
         background-color: #e4e4e4;
-        background: linear-gradient(180deg, #5076D9, #e4e4e4);
+        background: linear-gradient(180deg, #758067, #cdd4c2);
         margin: 0;
         display: flex;
         align-items: center;
@@ -23,7 +23,7 @@
         font-size: 20px;
         color: white;
         font-weight: bold;
-        background-color: #5076D9;
+        background-color: #434d36;
         border-radius: 20px;
         padding: 0;
         font-family: Arial, Helvetica, sans-serif;
@@ -43,9 +43,6 @@
         font-size: 12px;
         text-decoration: none;
         cursor: pointer;
-    }
-    .fonte-pequena:hover{
-        color: #5076D9;
     }
     .fonte-esquecisenha{
         font-family: Arial, Helvetica, sans-serif;
