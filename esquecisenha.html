@@ -11,9 +11,11 @@
 <body class="background">
     <div class="centralizado">
         <p class="titulo">ESQUECI MINHA SENHA</p><br>
-        <label class="fonte-esquecisenha">Digite seu e-mail para receber o link para redefinir sua senha</label><br><br>
-        <input type="text" id="email" name="email" placeholder="E-mail" class="caixa-cadastro" required><br><br>
-        <input href="index.html" type="submit" class="botao" value="Enviar"><br>
+        <form action="esquecisenha.php" method="POST">
+            <label class="fonte-esquecisenha">Digite seu e-mail para receber o link para redefinir sua senha</label><br><br>
+            <input type="text" id="email" name="email" placeholder="E-mail" class="caixa-cadastro" required><br><br>
+            <input type="submit" class="botao" value="Enviar"><br>
+        </form>
     </div>
 </body>
 </html>
