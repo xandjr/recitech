@@ -66,7 +66,7 @@ if (isset($_SESSION['id'])) {
     <link rel="manifest" href="manifest.webmanifest.json">
     <meta content='yes' name='apple-mobile-web-app-capable' />
     <meta content='yes' name='mobile-web-app-capable' />
-    <meta name="apple-mobile-web-app-status-bar" content="#5076D9">
+    <meta name="apple-mobile-web-app-status-bar" content="#434d36">
     <meta name="theme-color" content="black">
     <link rel="apple-touch-icon" href="imagens/logo.png">
 </head>
