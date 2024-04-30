@@ -1,26 +1,7 @@
-// //Mapa
-// class MeuMapa {
-//   constructor(tileSize){
-//     this.tileSize = tileSize;
-//     this.maxZoom = 10;
-//     this.name = 'Meu Mapa';
-//     this.alt = 'O mapa não carregou';
-//   }
-//   getTile(coord, zoom, ownerDocument){
-//     var div = ownerDocument.createElement('div');
-//     div.style.height = this.tileSize.height+'px';
-//     div.style.width = this.tileSize.width+'px';
-//     div.style.fontSize = '10px';
-//     div.style.borderStyle = 'solid';
-//     div.style.borderWidth = '1px';
-//     div.style.borderColor = '#333';
-//     return div;
-//   }
-// }
+// Mapa
 var map, infoWindow;
 function initMap() {
   var mapOptions = {
-      center: {lat: -5.777221144298522, lng: -35.25227316285317},
       zoom: 15,
       mapTypeId:  'roadmap', // roadmap, satellite, hybrid, terrain
       styles: [
@@ -198,20 +179,77 @@ function initMap() {
       mapTypeControl: false,
   };
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
-// Adicionar marcadores
-  var marker = new google.maps.Marker({
-    position: {lat: -5.777221144298522, lng: -35.25227316285317},
-    map: map,
-    title: 'Ponto de Coleta',
-    label: 'P',
-    // icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-    animation: google.maps.Animation.DROP
+
+  navigator.geolocation.watchPosition(function(position) {
+    var userLocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+    };
+
+    // Define o centro do mapa como a localização atual do usuário
+    map.setCenter(userLocation);
+
+    // Adiciona um marcador para a localização atual do usuário
+    var userMarker = new google.maps.Marker({
+        position: userLocation,
+        map: map,
+        title: 'Sua localização',
+        icon: "imagens/ponto.png"
+    });
+  }, function(error) {
+      // Tratamento de erro caso ocorra algum problema ao obter a localização
+      console.error('Erro ao obter a localização: ', error);
   });
 
-// Remover marcadores
+// Adicionar marcadores
+  var pontos = [
+    {
+      position: {lat: -5.8390202925596695,  lng: -35.21036443217419},
+      map: map,
+      title: 'Ponto de Coleta',
+      // label: 'P',
+      // icon: "imagens/ponto.png"
+      // animation: google.maps.Animation.DROP
+    },
+    {
+      position: {lat: -5.78402942496059, lng: -35.20212468608085},
+      map: map,
+      title: 'Ponto de Coleta',
+    },
+    {
+      position: {lat: -5.862463662360561, lng: -35.18654955927791},
+      map: map,
+      title: 'Ponto de Coleta',
+    },
+    {
+      position: {lat: -5.825031500748389, lng: -35.23570775985824},
+      map: map,
+      title: 'Ponto de Coleta',
+    }
+  ];
+  pontos.forEach(function(ponto) {
+    var marker = new google.maps.Marker({
+        position: ponto.position,
+        map: map,
+        title: ponto.title,
+        label: ponto.label,
+        animation: ponto.animation
+    });
+
+    marker.addListener('click', function() {
+      // Exibe informações sobre o local
+      var infoWindow = new google.maps.InfoWindow({
+          content: '<h3>' + ponto.title + '</h3>' +
+          '<p>Outras informações sobre o local...</p>'
+      });
+      infoWindow.open(map, marker);
+    });
+  });
+  // Remover marcadores
   // marker.setMap(null);
   
-//   map.mapTypes.set('meumapa', new MeuMapa(new google.maps.Size(256,256)));
+  // map.mapTypes.set('meumapa', new MeuMapa(new google.maps.Size(256,256)));
+  // Botão de centralizar
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement('button');
   locationButton.textContent = "Centralizar";
@@ -228,11 +266,6 @@ function initMap() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
-
-          infoWindow.setPosition(pos);
-        infoWindow.setContent("Aqui está você.");
-          infoWindow.open(map);
-          map.setCenter(pos);
         },
         () => {
           handleLocationError(true, infoWindow, map.getCenter());
