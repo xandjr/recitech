@@ -74,8 +74,8 @@ if (isset($_SESSION['id'])) {
       <div class="dropdown">
         <a href="#">Informativos</a>
         <div class="dropdown-content">
-          <a href="reciclagem.html">Reciclagem</a>
-          <a href="#">Reaproveitamento</a>
+          <a href="reciclagem.php">Reciclagem</a>
+          <a href="reaproveitamento.php">Reaproveitamento</a>
         </div>
       </div>
       <a href="pontosdecoleta.php">Pontos de Coleta</a>
@@ -83,7 +83,7 @@ if (isset($_SESSION['id'])) {
     
       <!-- Botão hamburguer (mobile) -->
       <div class="hamburguer" onclick="toggleMenu()">
-        <img src="imagens/hamburguer.png" alt="Ícone Hambúrguer">
+        <img src="imagens/hamburguer.svg" alt="Ícone Hambúrguer">
         <p class="nome-pagina">PERFIL</p>
       </div>
     
@@ -94,8 +94,8 @@ if (isset($_SESSION['id'])) {
         <div class="submenu" onclick="toggleSubmenu()">
           <a href="#">INFORMATIVOS</a>
           <ul>
-            <li><a href="reciclagem.html">RECICLAGEM</a></li>
-            <li><a href="#">REAPROVEITAMENTO</a></li>
+            <li><a href="reciclagem.php">RECICLAGEM</a></li>
+            <li><a href="reaproveitamento.php">REAPROVEITAMENTO</a></li>
           </ul>
         </div>
         <a href="pontosdecoleta.php">PONTOS DE COLETA</a>

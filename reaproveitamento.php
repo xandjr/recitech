@@ -10,7 +10,7 @@ if (isset($_SESSION['id'])) {
     $dbname = "recitech";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    // Verifica se a conexão foi estabelecida com sucesso
+ // Verifica se a conexão foi estabelecida com sucesso
     if (!$conn) {
       die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
     }
@@ -33,6 +33,9 @@ if (isset($_SESSION['id'])) {
         $endereco = $row["endereco"];
         $telefone = $row["telefone"];
         $foto = $row["foto"];
+        if (empty($foto)){
+          $foto = "./imagens/perfilembranco.svg";
+        }
 
     } else {
         // Se não houver dados, definir as variáveis como vazias
@@ -40,7 +43,6 @@ if (isset($_SESSION['id'])) {
         $endereco = "";
         $telefone = "";
         $foto = "";
-
         echo "Nenhum resultado encontrado para o ID de usuário: $usuario";
     }
 
@@ -50,6 +52,7 @@ if (isset($_SESSION['id'])) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -62,13 +65,6 @@ if (isset($_SESSION['id'])) {
     <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
     <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
     <script src="js/script.js" defer></script>
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.webmanifest.json">
-    <meta content='yes' name='apple-mobile-web-app-capable' />
-    <meta content='yes' name='mobile-web-app-capable' />
-    <meta name="apple-mobile-web-app-status-bar" content="#434d36">
-    <meta name="theme-color" content="black">
-    <link rel="apple-touch-icon" href="imagens/logo.png">
 </head>
 <body>
     <!-- Navbar -->
@@ -87,8 +83,8 @@ if (isset($_SESSION['id'])) {
     
       <!-- Botão hamburguer (mobile) -->
       <div class="hamburguer" onclick="toggleMenu()">
-        <img src="imagens/hamburguer.svg" alt="Ícone Hambúrguer">
-        <p class="nome-pagina">INICIO</p>
+        <img src="imagens/hamburguer.svg" alt="Ícone Hambúrguer" >
+        <p class="nome-pagina">REAPROVEITAMENTO</p>
       </div>
     
       <!-- Menu hamburguer (mobile) -->
@@ -99,18 +95,27 @@ if (isset($_SESSION['id'])) {
         <div class="submenu" onclick="toggleSubmenu()">
           <a href="#">INFORMATIVOS</a>
           <ul>
-            <li><a href="reciclagem.php">Reciclagem</a></li>
-            <li><a href="reaproveitamento.php">Reaproveitamento</a></li>
+            <li><a href="reciclagem.php">RECICLAGEM</a></li>
+            <li><a href="reaproveitamento.php">REAPROVEITAMENTO</a></li>
           </ul>
         </div>
         <a href="pontosdecoleta.php">PONTOS DE COLETA</a>
       </div>
     
       <!-- Conteúdo da página -->
-      <div class="conteudo">
-        <img src="imagens/logo.png" class="logo">
-        <?php echo "<p class='titulo' style='margin: 0px'>$nome</p>"; ?>
-        <a class="meta">Amante da Natureza</a><br>
+      <div class="conteudo1">
+        <div class="container">
+          <img src="imagens/recycle_sign.png" alt="reciclagem" class="img">
+          <p class="texto"><h3>O que é reciclagem?</h3><br>
+            A reciclagem é o processo de reaproveitamento de materiais descartados. Seu objetivo é reintroduzi-los na cadeia  produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e  melhorando a qualidade de vida das pessoas.
+          </p>
+        </div>
+        <div class="container">
+          <img src="imagens/reciclagem_eletronica.jpeg" alt="reciclagem" class="img">
+          <p class="texto"><h3>A reciclagem de eletrônicos</h3><br>
+            A reciclagem de lixo eletrônico é um processo altamente viável para evitar que esses artigos gerem danos ao meio ambiente e ao solo depois de um descarte irregular em qualquer que seja o local. Quando descartado de maneira incorreta, esses materiais podem causar danos à saúde das pessoas, de animais, entre diversas outras consequências negativas, por isso, a reciclagem de lixo eletrônico se faz cada vez mais necessária conforme os avanços tecnológicos. 
+          </p>
+          </div>
       </div>
     
       <script src="js/script.js"></script>
