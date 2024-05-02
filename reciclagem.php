@@ -65,6 +65,13 @@ if (isset($_SESSION['id'])) {
     <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
     <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
     <script src="js/script.js" defer></script>
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest.json">
+    <meta content='yes' name='apple-mobile-web-app-capable' />
+    <meta content='yes' name='mobile-web-app-capable' />
+    <meta name="apple-mobile-web-app-status-bar" content="#434d36">
+    <meta name="theme-color" content="black">
+    <link rel="apple-touch-icon" href="imagens/logo.png">
 </head>
 <body>
     <!-- Navbar -->
@@ -105,18 +112,19 @@ if (isset($_SESSION['id'])) {
       <!-- Conteúdo da página -->
       <div class="conteudo1">
         <div class="container">
-          <img src="imagens/recycle_sign.png" alt="reciclagem" class="img">
+          <img src="imagens/reciclagem.png" alt="reciclagem" class="img">
           <p class="texto"><h3>O que é reciclagem?</h3><br>
             A reciclagem é o processo de reaproveitamento de materiais descartados. Seu objetivo é reintroduzi-los na cadeia  produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e  melhorando a qualidade de vida das pessoas.
           </p>
         </div>
         <div class="container">
-          <img src="imagens/reciclagem_eletronica.jpeg" alt="reciclagem" class="img">
+          <img src="imagens/lixo_eletronico.jpg" alt="reciclagem" class="img">
           <p class="texto"><h3>A reciclagem de eletrônicos</h3><br>
             A reciclagem de lixo eletrônico é um processo altamente viável para evitar que esses artigos gerem danos ao meio ambiente e ao solo depois de um descarte irregular em qualquer que seja o local. Quando descartado de maneira incorreta, esses materiais podem causar danos à saúde das pessoas, de animais, entre diversas outras consequências negativas, por isso, a reciclagem de lixo eletrônico se faz cada vez mais necessária conforme os avanços tecnológicos. 
           </p>
           </div>
       </div>
+      
     
       <script src="js/script.js"></script>
 </body>
