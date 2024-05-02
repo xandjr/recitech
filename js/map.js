@@ -180,16 +180,17 @@ function initMap() {
   };
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+  // Função de geolocalização
   navigator.geolocation.watchPosition(function(position) {
     var userLocation = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
     };
 
-    // Define o centro do mapa como a localização atual do usuário
+    // Usado para deixar o mapa centrado na posição do usuário
     map.setCenter(userLocation);
 
-    // Adiciona um marcador para a localização atual do usuário
+    // Adiciona um marcador na localização do usuário
     var userMarker = new google.maps.Marker({
         position: userLocation,
         map: map,
@@ -197,16 +198,16 @@ function initMap() {
         icon: "imagens/ponto.png"
     });
   }, function(error) {
-      // Tratamento de erro caso ocorra algum problema ao obter a localização
+      // Erro caso ocorra algum problema ao conseguir a localização
       console.error('Erro ao obter a localização: ', error);
   });
 
 // Adicionar marcadores
   var pontos = [
     {
-      position: {lat: -5.8390202925596695,  lng: -35.21036443217419},
+      position: {lat: -5.829399640990832,  lng: -35.20889289176802},
       map: map,
-      title: 'Ponto de Coleta',
+      title: 'Evs Reciclagem Digital E Informatica',
       // label: 'P',
       // icon: "imagens/ponto.png"
       // animation: google.maps.Animation.DROP
@@ -214,17 +215,22 @@ function initMap() {
     {
       position: {lat: -5.78402942496059, lng: -35.20212468608085},
       map: map,
-      title: 'Ponto de Coleta',
+      title: 'EcoPonto de Coleta de Lâmpadas e Pilhas',
     },
     {
-      position: {lat: -5.862463662360561, lng: -35.18654955927791},
+      position: {lat: -5.841683114654219, lng: -35.21192824867318},
       map: map,
-      title: 'Ponto de Coleta',
+      title: 'Ecoponto Natal Shopping',
     },
     {
-      position: {lat: -5.825031500748389, lng: -35.23570775985824},
+      position: {lat: -5.864398849783733, lng: -35.18549817449187},
       map: map,
-      title: 'Ponto de Coleta',
+      title: 'Ecoponto de Lixo Eletrônico Do Praia Shopping',
+    },
+    {
+      position: {lat: -5.826028059860113, lng: -35.23472020388516},
+      map: map,
+      title: 'Natal Reciclagem',
     }
   ];
   pontos.forEach(function(ponto) {
@@ -240,7 +246,7 @@ function initMap() {
       // Exibe informações sobre o local
       var infoWindow = new google.maps.InfoWindow({
           content: '<h3>' + ponto.title + '</h3>' +
-          '<p>Outras informações sobre o local...</p>'
+          '<p>Infos</p>'
       });
       infoWindow.open(map, marker);
     });
