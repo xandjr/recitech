@@ -40,7 +40,7 @@
         }
             
     ],
-    "start_url": "index.php",
+    "start_url": "login1.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#5076D9"

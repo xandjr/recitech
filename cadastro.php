@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "recitech";
+$username = "u216342583_recitech";
+$password = "Recitech123!";
+$dbname = "u216342583_recitechbd";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -33,7 +33,7 @@ if (mysqli_num_rows($resultado) > 0) {
     } else {
         echo "Erro: " . $sql . "<br>" . $conn -> error;
     }
-}
+} 
 
 mysqli_close($conn);
 ?>

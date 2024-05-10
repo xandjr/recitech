@@ -14,8 +14,12 @@
     <meta name="apple-mobile-web-app-status-bar" content="#434d36">
     <meta name="theme-color" content="black">
     <link rel="apple-touch-icon" href="imagens/logo.png">
+    <script src="js/splash.js" defer></script>
 </head>
 <body class="background">
+    <div id="splash-screen">
+        <img src="imagens/logo.png" class="splashimg">
+    </div>
     <form action="login.php" method="post">
         <div class="centralizado">
         <img src="imagens/logo.png" class="logo"><br><br>
@@ -23,9 +27,8 @@
         <input type="text" id="email" name="email" placeholder="E-mail" class="caixa-cadastro" required><br>
         <input type="password" id="senha" name="senha" placeholder="Senha" class="caixa-cadastro" required><br><br>
         <a href="cadastro.html" class="fonte-pequena">Cadastre-se</a> | 
-        <a href="esquecisenha.html" class="fonte-pequena">Esqueci minha senha</a><br><br><br>
+        <a href="esquecisenha.php" class="fonte-pequena">Esqueci minha senha</a><br><br><br>
         <input type="submit" class="botao" value="Entrar">
-        
         </div>
     </form>
 </body>

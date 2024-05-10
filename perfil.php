@@ -5,9 +5,9 @@ session_start();
 // Verifica se o id do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "recitech";
+    $username = "u216342583_recitech";
+    $password = "Recitech123!";
+    $dbname = "u216342583_recitechbd";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
  // Verifica se a conexão foi estabelecida com sucesso
@@ -86,6 +86,7 @@ if (isset($_SESSION['id'])) {
         </div>
       </div>
       <a href="pontosdecoleta.php">Pontos de Coleta</a>
+      <a href="contatos.php">Contatos</a>
     </nav>
     
       <!-- Botão hamburguer (mobile) -->
@@ -106,6 +107,7 @@ if (isset($_SESSION['id'])) {
           </ul>
         </div>
         <a href="pontosdecoleta.php">PONTOS DE COLETA</a>
+        <a href="contatos.php">CONTATOS</a>
       </div>
     
       <!-- Conteúdo da página -->
@@ -131,7 +133,7 @@ if (isset($_SESSION['id'])) {
                 <label for="telefone" style="color:black; font-size: 25px">Telefone</label><br>
                 <input type="text" id="telefone" name="telefone" value="<?php echo $telefone; ?>" class="caixa-edicao"><br><br>
                 <label for="foto" style="color:black; font-size: 25px">Foto</label><br>
-                <input type="file" id="foto" name="foto" class="caixa-edicao" style="box-shadow:none" accept="image/*"><br><br>
+                <input type="file" id="foto" name="foto" class="caixa-edicao" style="box-shadow:none;" accept="image/*"><br><br>
                 <input type="submit" value="Salvar" class="botao"><br><br>
                 </form>
             </div>

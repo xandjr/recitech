@@ -5,9 +5,9 @@ session_start();
 // Verifica se o id do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "recitech";
+    $username = "u216342583_recitech";
+    $password = "Recitech123!";
+    $dbname = "u216342583_recitechbd";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // Verifica se a conexão foi estabelecida com sucesso
@@ -25,25 +25,6 @@ if (isset($_SESSION['id'])) {
     if ($result === false) {
         die("Erro na consulta: " . $conn->error);
     }
-
-    if ($result->num_rows > 0) {
-        // Recupera os dados do usuário e define as variáveis
-        $row = $result->fetch_assoc();
-        $nome = $row["nome"];
-        $endereco = $row["endereco"];
-        $telefone = $row["telefone"];
-        $foto = $row["foto"];
-
-    } else {
-        // Se não houver dados, definir as variáveis como vazias
-        $nome = "";
-        $endereco = "";
-        $telefone = "";
-        $foto = "";
-
-        echo "Nenhum resultado encontrado para o ID de usuário: $usuario";
-    }
-
     mysqli_close($conn);
 } else {
     header("Location: login1.html");
@@ -87,6 +68,7 @@ if (isset($_SESSION['id'])) {
         </div>
       </div>
       <a href="pontosdecoleta.php">Pontos de Coleta</a>
+      <a href="contatos.php">Contatos</a>
     </nav>
     
       <!-- Botão hamburguer (mobile) -->
@@ -108,6 +90,7 @@ if (isset($_SESSION['id'])) {
           </ul>
         </div>
         <a href="pontosdecoleta.php">PONTOS DE COLETA</a>
+        <a href="contatos.php">Contatos</a>
       </div>
     
       <!-- Conteúdo da página -->

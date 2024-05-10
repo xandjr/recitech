@@ -5,9 +5,9 @@ session_start();
 // Verifica se o id do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "recitech";
+    $username = "u216342583_recitech";
+    $password = "Recitech123!";
+    $dbname = "u216342583_recitechbd";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
  // Verifica se a conexão foi estabelecida com sucesso
@@ -25,27 +25,6 @@ if (isset($_SESSION['id'])) {
     if ($result === false) {
         die("Erro na consulta: " . $conn->error);
     }
-
-    if ($result->num_rows > 0) {
-        // Recupera os dados do usuário e define as variáveis
-        $row = $result->fetch_assoc();
-        $nome = $row["nome"];
-        $endereco = $row["endereco"];
-        $telefone = $row["telefone"];
-        $foto = $row["foto"];
-        if (empty($foto)){
-          $foto = "./imagens/perfilembranco.svg";
-        }
-
-    } else {
-        // Se não houver dados, definir as variáveis como vazias
-        $nome = "";
-        $endereco = "";
-        $telefone = "";
-        $foto = "";
-        echo "Nenhum resultado encontrado para o ID de usuário: $usuario";
-    }
-
     mysqli_close($conn);
 } else {
     header("Location: login1.html");
@@ -73,6 +52,7 @@ if (isset($_SESSION['id'])) {
     <meta name="theme-color" content="black">
     <link rel="apple-touch-icon" href="imagens/logo.png">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav>
@@ -86,6 +66,7 @@ if (isset($_SESSION['id'])) {
         </div>
       </div>
       <a href="pontosdecoleta.php">Pontos de Coleta</a>
+      <a href="contatos.html">Contatos</a>
     </nav>
     
       <!-- Botão hamburguer (mobile) -->
@@ -107,20 +88,22 @@ if (isset($_SESSION['id'])) {
           </ul>
         </div>
         <a href="pontosdecoleta.php">PONTOS DE COLETA</a>
+        <a href="contatos.html">CONTATOS</a>
       </div>
     
       <!-- Conteúdo da página -->
       <div class="conteudo1">
-        <div class="container">
-          <img src="imagens/reciclagem.png" alt="reciclagem" class="img">
-          <p class="texto"><h3>O que é reaproveitamento?</h3><br>
-          Reaproveitar o lixo eletrônico significa dar um novo uso a esses materiais, evitando que sejam descartados em aterros sanitários ou incinerados. Isso pode ser feito de diversas maneiras, como:<br>
-          <ul style="padding-left: 20%">
-            <li>Conserto e doação: Equipamentos que ainda funcionam podem ser consertados e doados para pessoas ou instituições que necessitam.</li>
-            <li>Desmontagem e reutilização de peças: Componentes funcionais de aparelhos eletrônicos podem ser reutilizados em novos equipamentos ou reparos.</li>
-            <li>Upcycling: Através da criatividade, o lixo eletrônico pode ser transformado em novos produtos, como peças de decoração, móveis e até mesmo instrumentos musicais.</li>
-          </ul>
-          </p>
+        <div class="card">
+          <table style="width: 100%">
+            <td><img src="imagens/reaproveitamento.png" alt="reciclagem" class="img"></td>
+            <td><p class="titulo-info">O que é reaproveitamento?</p><br>
+            <p class="texto">Reaproveitar o lixo eletrônico significa dar um novo uso a esses materiais, evitando que sejam descartados em aterros sanitários ou incinerados. Isso pode ser feito de diversas maneiras, como:</p>
+            <ul class="texto" style="padding-left: 50px">
+              <li>Conserto e doação: Equipamentos que ainda funcionam podem ser consertados e doados para pessoas ou instituições que necessitam.</li>
+              <li>Desmontagem e reutilização de peças: Componentes funcionais de aparelhos eletrônicos podem ser reutilizados em novos equipamentos ou reparos.</li>
+              <li>Upcycling: Através da criatividade, o lixo eletrônico pode ser transformado em novos produtos, como peças de decoração, móveis e até mesmo instrumentos musicais.</li>
+            </ul></td>
+          </table>
         </div>
       </div>
     

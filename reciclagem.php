@@ -5,9 +5,9 @@ session_start();
 // Verifica se o id do usuário está definido na sessão
 if (isset($_SESSION['id'])) {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "recitech";
+    $username = "u216342583_recitech";
+    $password = "Recitech123!";
+    $dbname = "u216342583_recitechbd";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
  // Verifica se a conexão foi estabelecida com sucesso
@@ -25,27 +25,6 @@ if (isset($_SESSION['id'])) {
     if ($result === false) {
         die("Erro na consulta: " . $conn->error);
     }
-
-    if ($result->num_rows > 0) {
-        // Recupera os dados do usuário e define as variáveis
-        $row = $result->fetch_assoc();
-        $nome = $row["nome"];
-        $endereco = $row["endereco"];
-        $telefone = $row["telefone"];
-        $foto = $row["foto"];
-        if (empty($foto)){
-          $foto = "./imagens/perfilembranco.svg";
-        }
-
-    } else {
-        // Se não houver dados, definir as variáveis como vazias
-        $nome = "";
-        $endereco = "";
-        $telefone = "";
-        $foto = "";
-        echo "Nenhum resultado encontrado para o ID de usuário: $usuario";
-    }
-
     mysqli_close($conn);
 } else {
     header("Location: login1.html");
@@ -86,6 +65,7 @@ if (isset($_SESSION['id'])) {
         </div>
       </div>
       <a href="pontosdecoleta.php">Pontos de Coleta</a>
+      <a href="contatos.html">Contatos</a>
     </nav>
     
       <!-- Botão hamburguer (mobile) -->
@@ -107,25 +87,25 @@ if (isset($_SESSION['id'])) {
           </ul>
         </div>
         <a href="pontosdecoleta.php">PONTOS DE COLETA</a>
+        <a href="contatos.html">CONTATOS</a>
       </div>
     
       <!-- Conteúdo da página -->
       <div class="conteudo1">
-        <div class="container">
-          <img src="imagens/reciclagem.png" alt="reciclagem" class="img">
-          <p class="texto"><h3>O que é reciclagem?</h3><br>
-            A reciclagem é o processo de reaproveitamento de materiais descartados. Seu objetivo é reintroduzi-los na cadeia  produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e  melhorando a qualidade de vida das pessoas.
-          </p>
+        <div class="card">
+          <table style="width: 100%">
+            <td><img src="imagens/reciclagem.png" alt="reciclagem" class="img"></td>
+            <td><p class="titulo-info">O que é reciclagem?</p><br>
+            <p class="texto">A reciclagem é o processo de reaproveitamento de materiais descartados. Seu objetivo é reintroduzi-los na cadeia  produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e  melhorando a qualidade de vida das pessoas.</p></td>
+          </table>
         </div>
-        <div class="container">
-          <img src="imagens/lixo_eletronico.jpg" alt="reciclagem" class="img">
-          <p class="texto"><h3>A reciclagem de eletrônicos</h3><br>
-            A reciclagem de lixo eletrônico é um processo altamente viável para evitar que esses artigos gerem danos ao meio ambiente e ao solo depois de um descarte irregular em qualquer que seja o local. Quando descartado de maneira incorreta, esses materiais podem causar danos à saúde das pessoas, de animais, entre diversas outras consequências negativas, por isso, a reciclagem de lixo eletrônico se faz cada vez mais necessária conforme os avanços tecnológicos. 
-          </p>
-          </div>
-      </div>
-      
-    
+        <div class="card">
+          <table style="width: 100%">
+            <td><img src="imagens/lixo_eletronico.jpg" alt="reciclagem" class="img"></td>
+            <td><p class="titulo-info">A reciclagem de eletrônicos</p><br>
+            <p class="texto">A reciclagem de lixo eletrônico é um processo altamente viável para evitar que esses artigos gerem danos ao meio ambiente e ao solo depois de um descarte irregular em qualquer que seja o local. Quando descartado de maneira incorreta, esses materiais podem causar danos à saúde das pessoas, de animais, entre diversas outras consequências negativas, por isso, a reciclagem de lixo eletrônico se faz cada vez mais necessária conforme os avanços tecnológicos.</p></td>
+          </table>
+        </div>
       <script src="js/script.js"></script>
 </body>
 </html>

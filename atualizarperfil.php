@@ -7,9 +7,9 @@ if (isset($_SESSION['id'])) {
     $usuario = $_SESSION['id'];
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "recitech";
+    $username = "u216342583_recitech";
+    $password = "Recitech123!";
+    $dbname = "u216342583_recitechbd";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // Verifica se a conexão foi estabelecida com sucesso
