@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* CSS do Menu */
+.topnav {
+    background-color: #434d36;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+  
+/* .topnav #myLinks {
+    display: none;
+} */
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    margin-bottom: -7px;
+}
+  
+.topnav a.icon {
+    display: ;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.active {
+    background-color: white;
+    color: rgb(255, 255, 255);
+}
+
+/* CSS da imagem de fundo */
+.imagemp{
+    background-image: url("main.jpg");
+    height: 600px;
+    background-size: cover;
+}
+.textoimagem{
+    text-align: left;
+    padding-top: 100px;
+    padding: 100px;
+   
+    color: #3f3e3e;
+    
+}
+.botao1{
+    padding: 10px 20px;
+      font-size: 13px;
+      background: none;
+      color: #3f3e3e;
+      border: 1px solid #3f3e3e;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 auto;
+      
+}
+.botao1:hover{
+    box-shadow: inset 0 0 0 25px #53a7ea;
+}
+
+
+/* Primeiros Cards */
+.body1{
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgb(253, 253, 253);
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .image{
+      position: relative;
+      text-align: center;
+      min-width: 60px;
+      max-width: 60px;
+      border: 2px solid black;
+      border-radius: 50%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: rgb(25, 21, 255);
+  }
+  .container1{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      
+      margin: 5%;
+      
+      
+  }
+  .card1{
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-style: solid;
+          border: 1px solid #030000;
+          margin-bottom: 5%;
+          border-radius: 10px;
+          margin: 10px;
+      }
+      .card1:hover{
+          background-color: rgb(25, 21, 255);
+          color: white;
+          
+      }
+  button{
+      position: relative;
+  }
+  .botao{
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgb(25, 21, 255);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 auto;
+  }
+
+
+  /* Segunda parte Cards */
+  .body2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    padding-top: 10px; 
+    background-color: rgb(236, 236, 236);
+    
+    
+  }
+  .container2{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+      margin: 5%;
+      position: relative;
+      text-align: justify;
+      right:50px;
+  }
+  .card2{
+      padding: 10px;
+      margin-left: 18px;
+  }
+
+   /*Terceira parte cards*/
+
+.container3{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+        text-align: center;
+        margin-right: 8%;
+        margin-left: 6%;
+}
+.card3{
+    background-color: rgb(217, 217, 217);
+    margin: 10px;
+    border-radius: 10px;
+    width: 220px;
+    height: 80px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+.card3x{
+    display: flex;
+    background-color: rgb(25, 21, 255);
+   height: 60px;
+    align-items: center;
+    border-radius: 10px;
+    width: 100px;
+    
+    
+    
+}
+.imgx{
+    width: 30px; 
+    height: 30px;
+    position: relative;
+    padding-left: 15px;
+
+}
+
+
+/* Quarta parte cards */
+
+.body4{
+    text-align: center;
+    margin-top: 70px;
+}
+.container4{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    
+    margin: 5%;
+    
+}
+.image4{
+    position: relative;
+    float: left;
+    min-width: 60px;
+    max-width: 60px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    
+}
+
+
+.card4{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border: 1px solid #c0c0c0;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.card4:hover{
+    box-shadow: 0px 0px 10px#c0c0c0;
+}
+
+
+/* Quinta parte cards com fotos */
+.body5{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: rgb(236, 236, 236);
+    padding: 10px;
+    margin-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+  }
+ 
+  
+  .image5{
+      max-width: 100%;
+      max-height: 90%;
+      min-width: 100%;
+      min-height: 90%;
+      border: none;
+      border-top-left-radius: 3%;
+      border-top-right-radius: 3%;
+      
+  }
+  .container5{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      text-align: center;
+      margin: 5%;
+      
+      
+  }
+  figure{
+      border: 1px solid black;
+      border-radius: 3%;
+      padding: 0;
+      margin: 5%;
+     cursor: pointer;
+     padding-bottom: 80px;
+  }
+  figcaption{
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+ 
+ 
+  /* Menu do footer */
+  .lista2{
+        color: white;
+        background-color: #3f3e3e;
+        text-align: right;
+        padding: 20px;
+  }
+  .lista2 ul{
+    list-style-type: none;
+    
+  }
+  .lista2 li{
+    display: inline-block;
+    background-color: #3f3e3e;
+    border-radius: 10px;
+
+   
+}
+.lista2  a{
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  
+    font-size: small;
+    
+   
+}
