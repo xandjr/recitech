@@ -5,6 +5,27 @@ body {
 }
   /* Menu desktop */
   @media screen and (min-width: 601px) {
+    /* Estilos para os cards */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }      
+    .card h3 {
+      margin-top: 0;
+    }
+    .card p {
+      margin-bottom: 0;
+    }
+    .titulo-info{
+      text-align: center;
+      font-weight: bold;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
     .textoperfil{
       color: #4a701c;
       font-size: 30px;
@@ -12,8 +33,11 @@ body {
       font-family: Arial, Helvetica, sans-serif;
     }
     .fotoperfil{
-      border-radius: 100px;
+      height: 200px;
       width: 200px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 50%;
     }
     .caixa-cadastro{
       font-size: 25px;
@@ -33,6 +57,8 @@ body {
       border: none;
       padding-left: 3px;
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.348);
+      
+      
     }
     .cadastro-realizado{
       font-size: 40px;
@@ -172,6 +198,159 @@ body {
       font-family: Arial, Helvetica, sans-serif;
       padding: 0px 90px;
     }
+    /* Estilos para a barra de progresso */
+    .barramissao{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .missao{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .missaotexto{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .barra-container {
+        display: grid;
+        align-items: center;
+        max-width: 350px; 
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 20px;
+        margin: 10px;
+    }
+    .barrabotao{
+        display: flex;
+    }
+    .barra { 
+        flex: 1; 
+        height: 20px;
+        width: 300px;
+        border-radius: 10px;    
+        background-color: #ccc;
+        overflow: hidden; /* Adiciona overflow hidden para limitar o tamanho da barra */
+        margin-right: 10px; 
+        margin-top: 10px;
+    }
+
+    .barra div {
+        height: 100%;
+        border-radius: 10px;
+        background-color: #222;
+        width: 0; /* Define a largura inicial da barra preta como 0 */
+        transition: width 300ms; /* Adiciona transição para suavizar a mudança de largura */
+    }
+
+    .botao-adicionar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #7cb80d; 
+        color: white;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 300ms; /* Adiciona transição para suavizar a mudança de cor */
+    }
+
+    .botao-adicionar:hover {
+        background-color: #7cb80d;
+    }
+
+    .contador {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px; 
+    }
+
+    /* Estilos para as conquistas */
+
+    .conquista-container {
+        margin-top: 20px; 
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conquista {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; 
+    }
+
+    .conquista .icone {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background-color: #ccc; 
+        border-radius: 50%;
+    } 
+
+    .conquista .descricao h4 {
+        margin: 0;
+    }
+
+    .conquista .descricao p {
+        margin: 5px 0;
+        color: #888;
+    }
+
+    /* Estilos para as conquistas ativas */
+    .conquista.ativa .icone {
+        background-color: #7cb80d; 
+    }
+    .recompensa{
+        text-align: center;
+    }
+    .containercontatos{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      margin: 5%;
+    }
+    .cardcontatos {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin: 10px;
+        background-color: #e4e4e4;
+        background: linear-gradient(180deg, #758067, #cdd4c2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .cardcontatos:hover {
+        transform: translateY(-5px);
+    }
+
+    .cardcontatos h3 {
+        margin-top: 0;
+    }
+
+    .cardcontatos p {
+        margin-bottom: 0;
+    }
+    .imagecontatos{
+        position: relative;
+        text-align: center;
+        width: 60px;
+        border: 2px solid black;
+        border-radius: 25%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #758067;
+    }
   }
   .hamburguer {
     color: #ffffff;
@@ -259,6 +438,8 @@ body {
     text-align: center;
     z-index: -1;
     margin-top: 10px;
+    /*margin-left: 30%;*/
+    /*margin-right: 30%;*/
   }
   .logo{
     width: 150px;
@@ -283,6 +464,7 @@ body {
     width: 200px;
     float: left;
     margin: 15px;
+    filter: drop-shadow(5px 2px 3px grey);
     
   }
   .texto{
@@ -315,8 +497,11 @@ body {
       font-family: Arial, Helvetica, sans-serif;
     }
     .fotoperfil{
-      border-radius: 100px;
       width: 200px;
+      height: 200px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 50%;
     }
     .caixa-edicao{
       font-size: 25px;
@@ -369,15 +554,36 @@ body {
       margin-right: 5%;
     }
     .img{
-      width: 100px;
+      width: 150px;
       align-items: center;
       float: left;
+      filter: drop-shadow(5px 2px 3px grey);
+    }
+    /* Estilos para os cards */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }      
+    .card h3 {
+      margin-top: 0;
+    }
+    .card p {
+      margin-bottom: 0;
+    }
+    .titulo-info{
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
     }
     .texto{
       padding-left: 10px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: smaller;
-    
+      font-size: 15px;
     }
     .cadastro-realizado{
       font-size: 30px;
@@ -437,5 +643,158 @@ body {
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
       padding: 0px 90px;
+    }
+    /* Estilos para a barra de progresso */
+    .barramissao{
+      align-items: center;
+      justify-content: center;
+    }
+    .missao{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .missaotexto{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .barra-container {
+        display: grid;
+        align-items: center;
+        max-width: 350px; 
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 20px;
+        margin: 10px;
+    }
+    .barrabotao{
+        display: flex;
+    }
+    .barra { 
+        flex: 1; 
+        height: 20px;
+        width: 300px;
+        border-radius: 10px;    
+        background-color: #ccc;
+        overflow: hidden; /* Adiciona overflow hidden para limitar o tamanho da barra */
+        margin-right: 10px; 
+        margin-top: 10px;
+    }
+
+    .barra div {
+        height: 100%;
+        border-radius: 10px;
+        background-color: #222;
+        width: 0; /* Define a largura inicial da barra preta como 0 */
+        transition: width 300ms; /* Adiciona transição para suavizar a mudança de largura */
+    }
+
+    .botao-adicionar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #7cb80d; 
+        color: white;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 300ms; /* Adiciona transição para suavizar a mudança de cor */
+    }
+
+    .botao-adicionar:hover {
+        background-color: #7cb80d;
+    }
+
+    .contador {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px; 
+    }
+
+    /* Estilos para as conquistas */
+
+    .conquista-container {
+        margin-top: 20px; 
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conquista {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; 
+    }
+
+    .conquista .icone {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background-color: #ccc; 
+        border-radius: 50%;
+    } 
+
+    .conquista .descricao h4 {
+        margin: 0;
+    }
+
+    .conquista .descricao p {
+        margin: 5px 0;
+        color: #888;
+    }
+
+    /* Estilos para as conquistas ativas */
+    .conquista.ativa .icone {
+        background-color: #7cb80d; 
+    }
+    .recompensa{
+        text-align: center;
+    }
+    .containercontatos{
+      display: grid;
+      margin-top: 5%;
+      justify-items: center;
+    }
+    .cardcontatos {
+        width: 60%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        text-align: center;
+        background: linear-gradient(180deg, #758067, #cdd4c2);
+    }
+
+    .cardcontatos:hover {
+        transform: translateY(-5px);
+    }
+
+    .cardcontatos h3 {
+        margin-top: 0;
+    }
+
+    .cardcontatos p {
+        margin-bottom: 0;
+    }
+    .imagecontatos{
+        position: relative;
+        text-align: center;
+        width: 60px;
+        border: 2px solid black;
+        border-radius: 25%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #758067;
     }
   }
